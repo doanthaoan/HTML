@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Challenge 006</title>
+    <style>
+        .khung {
+            width: 400px;
+            height: 300px;
+            background-color: #ac474b;
+
+        }
+
+        .lon {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            /* transform: translateX(50%); */
+            top: 50px;
+        }
+
+        .mu {
+            width: 40px;
+            height: 50px;
+            background-color: #0e1f2b;
+            position: absolute;
+            z-index: 1;
+
+        }
+
+        .van {
+            width: 40px;
+            height: 8px;
+            background-color: #ffff;
+            position: absolute;
+            top: 20px;
+        }
+
+        .vanh {
+            width: 60px;
+            height: 5px;
+            background-color: #0e1f2b;
+            bottom: 0;
+            right: -10px;
+            position: absolute;
+
+        }
+
+        .dau {
+            width: 60px;
+            height: 60px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            top: 40px;
+            position: absolute;
+
+
+        }
+
+        .mat1 {
+            width: 10px;
+            height: 10px;
+            background-color: #0e1f2b;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 15px;
+        }
+
+        .mat2 {
+            width: 10px;
+            height: 10px;
+            background-color: #0e1f2b;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            right: 15px;
+        }
+
+        .khan1 {
+            width: 100px;
+            height: 20px;
+            position: absolute;
+            background-color: #ac474b;
+            top: 85px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .khan {
+            width: 60px;
+            height: 10px;
+            background-color: #ffa63f;
+            position: absolute;
+            top: 5px;
+            border-radius: 20px;
+        }
+
+        .than {
+            width: 100px;
+            height: 100px;
+            background-color: #ffffff;
+            top: 90px;
+            position: absolute;
+            /* border-bottom-left-radius: 100%;
+border-bottom-right-radius: 100%; */
+            border-radius: 50%;
+
+        }
+    </style>
+</head>
+<div class="khung">
+    <span class="lon">
+        <div class="mu">
+            <div class="van"></div>
+            <div class="vanh"></div>
+        </div>
+        <div class="dau">
+            <div class="mat1"></div>
+            <div class="mat2"></div>
+        </div>
+        <div class="khan1">
+            <div class="khan"></div>
+        </div>
+        <div class="than"></div>
+    </span>
+</div>
+
+<body>
+    <div class="frame" style="margin: 0; padding: 0; width: 400px; height: 300px; margin: 0 auto; position: relative;">
+        <!-- Go HTML vao day -->
+    </div>
+</body>
+
+</html>

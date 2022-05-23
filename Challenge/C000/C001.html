@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .frame {
+      margin: 0;
+      padding: 0;
+      width: 400px;
+      height: 300px;
+      margin: 0 auto;
+      position: relative;
+    }
+    /* Go CSS vao day */
+    .frame {
+      background: #ccc;
+      /* display: flex;
+      align-items: center; */
+    }
+    .top,.bottom {
+      height:100px;
+      overflow: hidden;
+    }
+    .top {
+      padding-top:50px;
+    }
+    .circle {
+      border-radius: 50%;
+      background: bisque;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      margin: 0 auto;
+      position: relative;
+    }
+     .top .circle {
+      transform: rotate(180deg);
+      
+    }
+    .bottom .circle {
+      transform: translateY(-100px);
+    }
+    .square {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+    }
+    .square1 {
+      background: indianred;
+      transform: rotate(45deg) translateY(100px);
+      
+    }
+    .square2 {
+      background: cadetblue;
+      transform: rotate(90deg) translateY(100px);
+      
+    }
+    .square3 {
+      background: brown;
+      transform: rotate(135deg) translateY(100px);
+      
+    }
+    .square4 {
+      background: brown;
+      transform: rotate(180deg) translateY(100px);
+      
+    }
+    .wrap div {
+      position: absolute;
+      border-top:0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      width: 0;
+      height: 0;
+    }
+    .tamgiac {      
+      border-bottom: 100px solid orange;
+    }
+    .tamgiac2 {
+      border-bottom: 100px solid orange;
+      transform: rotate(45deg);
+    }
+    .tamgiac3 {
+      border-bottom: 100px solid orange;
+      transform: rotate(90deg);
+    }
+    .tamgiac4 {
+      border-bottom: 100px solid orange;
+      transform: rotate(135deg);
+    }
+    .tamgiac5 {
+      border-bottom: 100px solid orange;
+      transform: rotate(180deg);
+    }
+    .tamgiac6 {
+      border-bottom: 100px solid orange;
+      transform: rotate(225deg);
+    }
+    .tamgiac7 {
+      border-bottom: 100px solid orange;
+      transform: rotate(270deg);
+    }
+    .tamgiac8 {
+      border-bottom: 100px solid orange;
+      transform: rotate(315deg);
+    }
+    .wrap div.circle-tamgiac {
+      height: 60px;
+      width: 60px;
+      background: #ccc;
+      border-radius: 50%;
+      border: none!important;
+      left: 75px;
+      top: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="frame">
+<!-- Go HTML vao day -->
+    <div class="top">
+      <div class="circle">
+        <div class="square square1"></div>
+        <div class="square square2"></div>
+        <div class="square square3"></div>
+        <div class="square square4"></div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="circle">
+        <div class="square square1"></div>
+        <div class="square square2"></div>
+        <div class="square square3"></div>
+        <div class="square square4"></div>
+      </div>
+    </div>
+    <div class="wrap" style="position:relative;">
+      <div class="tamgiac"></div>
+      <div class="tamgiac2"></div>
+      <div class="tamgiac3"></div>
+      <div class="tamgiac4"></div>
+      <div class="tamgiac5"></div>
+      <div class="tamgiac6"></div>
+      <div class="tamgiac7"></div>
+      <div class="tamgiac8"></div>
+      <div class="circle-tamgiac"></div>
+    </div>
+    
+  </div>
+</body>
+
+</html>

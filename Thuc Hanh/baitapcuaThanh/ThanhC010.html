@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Challenge 006</title>
+  <style>
+    /* Go CSS vao day */
+    .frame {
+      background-color: #ac474b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      flex-direction: column;
+
+
+
+
+
+
+
+    }
+
+    .hat1 {
+      width: 45px;
+      height: 50px;
+      background-color: #0e1f2b;
+      display: flex;
+      align-items: center;
+      
+      z-index: 5;
+      transform: translateY(25px);
+
+    }
+
+    .hat2 {
+      width: 60px;
+      height: 5px;
+      background-color: #0e1f2b;
+      z-index: 5;
+      transform: translateY(25px);
+    }
+
+    .line {
+      width: 45px;
+      height: 10px;
+      background-color: #FFFFFF;
+    }
+
+    .head {
+      background-color: #FFFFFF;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      transform: translate(0px, 15px);
+      
+      
+      position: relative;
+      
+
+    }
+
+
+    .khan {display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 20px;
+      background-color: #ac474b;
+      z-index: 10;
+      transform: translateY(0px);
+    }
+
+    .body {
+      width: 100px;
+      height: 100px;
+      background-color: #FFFFFF;
+      border-radius: 50%;
+      transform: translateY(-10px);
+      
+    }
+
+    .eye1,.eye2 {
+      width: 10px;
+      height: 10px;
+      background-color: #0e1f2b;
+      border-radius: 50%;
+      transform: translateY(25px);
+      position: absolute;
+    }
+    .khan2{
+      background-color: #ffa63f;
+      border-radius: 10px;
+      width: 60px;
+      height: 10px;
+     
+    }
+    .eye1{
+      left: 15px;
+      
+    }
+    .eye2{
+      right: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="frame" style="margin: 0; padding: 0; width: 400px; height: 300px; margin: 0 auto; position: relative;">
+    <!-- Go HTML vao day -->
+
+    <div class="hat1">
+      <div class="line"></div>
+    </div>
+    <div class="hat2"></div>
+    <div class="head">
+      <div class="eye1"></div>
+      <div class="eye2"></div>
+    </div>
+    <div class="khan">
+      <div class="khan2"></div>
+    </div>
+    <div class="body"></div>
+
+  </div>
+</body>
+
+</html>

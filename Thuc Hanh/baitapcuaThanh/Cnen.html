@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Challenge ngon nen</title>
+  <style>
+        /* Go CSS vao day */
+        .frame{
+          width: 400px;
+          height: 300px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: #14313E;
+        }
+        .lua{
+          width: 30px;
+          height: 50px;
+          background-color: #f3ac3c;
+          border-radius:80px 0px  ;
+          transform: translate(15px,20px);
+          
+          z-index: 3;
+        }
+        .lua2{
+          width: 60px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #14313E;
+          transform: translateY(10px);
+          z-index: 2;
+        }
+        .nen1{
+          width: 80px;
+          height: 30px;
+          background-color: #F3695A;
+          border-radius: 50%;
+          transform: translateY(-10px);
+          z-index: 1;
+        }
+        .nen2{
+          width: 80px;
+          height: 100px;
+          background-color: #BA3E46;
+          transform: translateY(-25px);
+        }
+        .nen3{
+          width: 80px;
+          height: 30px;
+          background-color: #BA3E46;
+          border-radius: 50%;
+          transform: translateY(-40px);
+        }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="frame" style="margin: 0; padding: 0; width: 400px; height: 300px; margin: 0 auto; position: relative;">
+  <!-- Go HTML vao day -->
+  <div class="lua"></div>
+  <div class="lua2"></div>
+  <div class="nen1"></div>
+  <div class="nen2"></div>
+  <div class="nen3"></div>
+
+  </div>
+</body>
+
+</html>

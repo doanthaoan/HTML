@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#banner {
+            text-align: center;
+            background-color: aquamarine;
+            background-image: URL("bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        button {
+            border: 1px solid #fff;
+            border-radius: 4px;
+            padding: 5px 20px;
+        }
+        div p, div h1 {
+
+        }
+        p.banner-text-color#p1, h1, div button.banner-text-color {
+            color: bisque;
+        }
+        .btn-cancel {
+            color: #000!important;
+            background-color: #ccc;
+        }
+        .btn-ok {
+            color: #000;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <h1 class="banner-text-color">Tieu de</h1>
+        <p id="p1" class="banner-text-color">Noi dung mo ta</p>
+        <p class="banner-text-color">Mo ta so 2</p>
+
+        <button  class="banner-text-color btn-cancel">Cancel</button>
+        <button class="btn-ok">OK</button>
+    </div>
+    <button>Button Ngoai div</button>
+    <div>
+        Content
+    </div>
+    <div class="btn-ok">Footer</div>
+
+</body>
+</html>

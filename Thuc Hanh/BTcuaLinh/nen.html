@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Challenge 006</title>
+    <style>
+        .frame {
+            background-color: #14313e;
+            display: flex;
+            justify-content: center;
+
+        }
+        .khung {
+            top: 50px;
+            position: absolute;
+        }
+        .lua1 {
+            width: 25px;
+            height: 25px;
+            border-top-left-radius: 100%;
+            background-color: #f3ac3c;
+            position: absolute;
+        }
+        .lua2 {
+            width: 25px;
+            height: 25px;
+            border-bottom-right-radius: 100%;
+            background-color: #f3ac3c;
+            position: absolute;
+            top: 20px;
+        }
+        .trong {
+            width: 80px;
+            height: 15px;
+            background-color: #14313e;
+            border-radius: 0 0 50% 50% / 0 0  100% 100%;
+            top: 50px;
+            position: absolute;
+            right: -45px;
+            z-index: 1;
+        }
+
+        .than {
+            width: 80px;
+            height: 120px;
+            background-color: #ba3e46;
+            position: absolute;
+            top: 50px;
+            right: -45px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .vanh {
+            width: 80px;
+            height: 25px;
+            border-radius: 0 0 50% 50% / 0 0 50% 50%;
+            background-color: #f3695a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame" style="margin: 0; padding: 0; width: 400px; height: 300px; margin: 0 auto; position: relative;">
+        <span class="khung">
+            <div class="lua1"></div>
+            <div class="lua2"></div>
+            <div class="trong"></div>
+            <div class="than">
+                <div class="vanh"></div>
+            </div>
+        </span>
+
+
+    </div>
+</body>
+
+</html>

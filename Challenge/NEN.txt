@@ -1,0 +1,35 @@
+<style>
+        .x{
+        background:#14313e;
+    }
+    .y{
+        background:#ba3e46;
+        margin: 125 160 75;
+    }
+    .a{
+        background: #f3695a;
+        position: fixed;
+        width: 80;
+        height: 30;
+        border-radius: 50%;
+        margin: -15 0;
+        box-shadow: 0 100px #ba3e46;
+    }
+    .b{
+        background: #14313e;
+        position: fixed;
+        width: 60;
+        height: 30;
+        border-radius: 50%;
+        margin: -10 10;
+        box-shadow: 0 100px #ba3e46;
+    }
+    .c{
+        background: #f3ac3c;
+        position: fixed;
+        width: 30;
+        height: 50;
+        border-radius: 1in 0;
+        margin: -40 30;
+    }
+    </style>

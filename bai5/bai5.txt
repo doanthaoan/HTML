@@ -1,0 +1,30 @@
+Thực hành Javascript
+- Kiến thức có thể sử dụng: 
+	document.getElementById(): Xác định element HTML bằng ID
+	document.getElementByClassName(): Xác định CÁC element HTML bằng class (array)
+	document.getElementByTagName(): Xác định CÁC element HTML bằng thẻ html (html tag) (array)
+
+	Sử dụng các cách getElement để trả ra element HTML và dùng tiếp các properties, method của chúng để thực hiện:
+	
+	.addEventListerner("tên_event", function(){... đoạn code thực thi, gọi hàm,... })
+	.innerHTML = "Nội dung khối HTML được chèn vào" : Cập nhật (gán) nội dung mới element HTML đã được xác định.
+	.value: lấy giá trị của các khối input
+	.value = "giá trị mới" : gán giá trị cho các input
+	.classList.add("ten_class_duoc_add"): thêm class mới
+	.classList.remove("ten_class_bi_remove"): bỏ class
+	.classList.contains("ten_class"): kiểm tra 1 class có trong classList hay không
+	.classList.toggle("ten_class"): nếu tên_class có trong list => remove, neu ten_class không có trong list => add
+
+- Ví dụ:
+	document.getElementById("left").classList.add("blue"): Thêm class "blue" vào element có id là "left"
+	document.getElenentById("ketqua").innerHTML = "80": Thay nội dung trong element có id là "ketqua" thành "80"
+Bai 5 - 1: 
+- Nội dung: 
+	Tạo 2 ô div 300 x 300 pixel, ban đầu ô trái màu đỏ, ô phải màu xanh.
+	Tạo 1 nút "Đổi màu". MỖI LẦN click vào nút này, màu 2 ô đổi cho nhau.
+Bài 5 - 2:
+- Nội dung: 
+	Tạo một menu gồm: HOME, PRODUCTS, ABOUT, CONTACT.
+	Khi click vào một item menu nào thì: 
+		item đó cần được: thêm class "active".
+		các item còn lại trong menu sẽ không có class "active"	

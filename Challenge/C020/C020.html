@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Challenge 006</title>
+  <style>
+    /* Go CSS vao day */
+    .frame {
+      background: #6592cf;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .tri {
+        width:86px;
+        height:0;  
+        border-top: 80px solid transparent;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* transform: translate(-50%); */
+        overflow: hidden;
+    }
+    .tri1 {
+        transform: translate(-50%,0);
+    }
+    .tri2 {
+        transform: rotate(180deg) translate(50%,80px);
+    }
+    
+    .hex1 {
+        background: #222;
+        width: 186px;
+        height:180px;
+        overflow: hidden;
+        clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    }
+    /* .hex1 {
+        transform: rotate(60deg) translate(-40px, -80px);
+    } */
+  </style>
+</head>
+
+<body>
+  <div class="frame" style="margin: 0; padding: 0; width: 400px; height: 300px; margin: 0 auto; position: relative;">
+    <!-- Go HTML vao day -->
+    <div class="hex1">
+        <!-- <div class="tri1 tri"></div>
+        <div class="tri2 tri"></div> -->
+    </div>
+    
+    
+    <!-- <div class="tri3 tri"></div> -->
+  </div>
+</body>
+
+</html>

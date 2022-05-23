@@ -1,0 +1,65 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #tong {
+                color: red;
+                font-weight: bold;
+            }
+            .wrapRed {
+                background: red;
+            }
+            .bgBlue {
+                background: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="" id="wrap1">
+            <label for="">A</label>
+        <input type="text" name="" id="soA">
+        <label for="">B</label>
+        <input type="text" name="" id="soB">
+        <div id="tong">
+
+        </div>
+        <!-- <a href="" class="btnTinhTong" id="btnAdd">Add class</a> -->
+        <a href="#" class="btnTinhTong" id="btnRemove">Remove</a>
+        <button id="btnAdd">Add Class</button>
+        <a href="#" id="btnTong">Tinh Tong</a>
+        </div>
+        
+        <script>
+            // let wrap = document.getElementById('wrap1');
+            function addClass () {
+                var x = document.getElementById('wrap1');
+                x.classList.add("aaaaaaaaaaaaaaaaaaa");
+                console.log(document.getElementById("wrap1"));
+            }
+            
+            const removeClass = (name) => {
+                document.getElementById("wrap1").classList.remove(name);
+            }
+            document.getElementById("btnAdd").addEventListener('click', function() {addClass()}, false);
+            document.getElementById("btnTong").addEventListener('click', function() {tinhTong()}, false);
+            document.getElementById("btnRemove").addEventListener("click", function() {removeClass("aaaaaaaaaaaaaaaaaaa")}, false);
+            function tinhTong () {
+                let a = document.getElementById("soA").value;
+                let b = document.getElementById("soB").value;
+                let content;
+                if (parseInt(a) && parseInt(b)) {
+                    content = parseInt(a) + parseInt(b);
+                } else if (!parseInt(a) || !parseInt(b)) {
+                    content = "A va B phai la so"
+                }
+                document.getElementById("tong").innerHTML = content;
+                console.log(parseInt(a), b);
+            }
+        </script>
+    </body>
+    </html>

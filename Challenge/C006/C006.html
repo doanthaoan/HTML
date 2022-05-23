@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Challenge 006</title>
+  <style>
+    /* Go CSS vao day */
+    .frame {
+      background: #6592cf;
+      display: flex;
+      justify-content: center;
+    }
+
+    .wrap {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .mai {
+      height: 0;
+      width: 0;
+      border-top: 0 solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 100px solid #243d83;
+      border-left: 100px solid transparent;
+    }
+
+    .nha {
+      height: 100px;
+      width: 150px;
+      background: #243d83;
+      transform: translateX(25px);
+      border-radius: 0 0 10px 10px;
+      position: relative;
+    }
+
+    .hien {
+      width: 100px;
+      height: 10px;
+      background: #eeb850;
+      transform: translate(25px, -5px);
+      border-radius: 4px;
+    }
+
+    .cua {
+      width: 50px;
+      height: 50px;
+      background: #eeb850;
+      transform: translate(25px, -5px);
+      border-radius: 10px 10px 0 0;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="frame" style="margin: 0; padding: 0; width: 400px; height: 300px; margin: 0 auto; position: relative;">
+    <!-- Go HTML vao day -->
+    <div class="wrap">
+      <div class="mai"></div>
+      <div class="nha">
+        <div class="hien"></div>
+        <div class="cua"></div>
+      </div>
+    </div>
+  </div>
+  <button id="tatden">Tắt đèn</button>
+  <script>
+    function tatden() {
+      let hien = document.getElementsByClassName("hien")[0];
+      let cua = document.getElementsByClassName("cua")[0];
+      let action = document.getElementById("tatden").innerHTML;
+      console.log(action);
+      if (action === "Tắt đèn") {
+        hien.style.background = "#000";
+        cua.style.background = "#000";
+        document.getElementById("tatden").innerHTML = "Bật đèn";
+      } else { // bat den
+        hien.style.background = "#eeb850";
+        cua.style.background = "#eeb850";
+        document.getElementById("tatden").innerHTML = "Tắt đèn";
+      }
+      console.log(hien);
+
+    }
+    document.getElementById("tatden").onclick = function () {
+      tatden();
+    }
+  </script>
+</body>
+
+</html>

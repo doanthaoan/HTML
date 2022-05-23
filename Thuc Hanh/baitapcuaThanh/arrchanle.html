@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <script>
+        function chan_le(n) {
+            let flag = 1;
+            if (n % 2 == 0) {
+                flag = 0;
+            }
+            return flag;
+        }
+
+
+        let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+
+        let arrle = [];
+        let arrchan = [];
+
+        for (let index = 0; index < arr.length; index++) {
+            if (arr[index] % 2 == 0)
+                console.log("chan: ", arr[index]);    
+            else
+                console.log("le: ", arr[index]);
+        }
+
+
+        for (let i = 0; i < arr.length; i = i + 2) {
+            console.log("chan: ", arr[i]);
+            arrchan.push(arr[i]);
+        }
+        for (let i = 1; i < arr.length; i = i + 2) {
+            console.log("chan: ", arr[i]);
+            arrle.push(arr[i]);
+        }
+
+        // let n = 20;
+        // let newArr = [];
+        // for (let i = 0; i < n; i++) {
+        //     newArr.push(Math.floor(Math.random() * 10));
+        // }
+        // for (let i = 0; i < newArr.length; i++) {
+        //     if (chan_le(newArr[i]) == 0) 
+        //         arrchan.push(newArr[i]);
+        //     else 
+        //         arrle.push(newArr[i])
+        // }
+        // console.log(newArr)
+        console.log(arrle);
+        console.log(arrchan);
+    </script>
+</body>
+
+</html>

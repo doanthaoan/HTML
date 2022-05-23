@@ -1,0 +1,18 @@
+Javascript - 01
+Bài 1: Cho dãy số tự nhiên từ 0 tới 9
+- Hiển thị ra console log: Các số chẵn
+- Hiển thị ra console log: Các số lẻ
+
+Bài 2: Cho dãy số tự nhiên từ 0 tới 9
+- Khởi tạo 2 array arrChan, arrLe
+- Viết code kiểm tra lần lượt dãy số đã cho và:
+	+ Đẩy các số chẵn vào array arrChan
+	+ Đẩy các số lẻ vào array arrLe
+- Console log arrChan và arrLe
+
+Bài mở rộng: Cho một array bất kỳ gồm n phần tử đều là số tự nhiên
+- Khởi tạo 2 array arrChan, arrLe
+- Viết code kiểm tra lần lượt các phần tử của array đã cho :
+	+ Đẩy các số chẵn vào array arrChan
+	+ Đẩy các số lẻ vào array arrLe
+- Console log arrChan và arrLe

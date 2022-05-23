@@ -1,0 +1,27 @@
+JS:
+    Một số hàm:
+    Toán học, số
+        Math.random(): Trả ra một số ngẫu nhiên n, trong đó 0 < n < 1
+        Math.round(n): Làm tròn một số n. Nếu phần thập phân < 5 => Làm tròn xuống. Nếu phần thập phân >=5 => Làm tròn lên
+        Math.floor(n): Làm tròn một số n, luôn làm tròn xuống.
+        Math.ceil(n): Làm tròn một số n, luôn làm tròn lên.
+    String: (let str = "noi dung string")
+        string.indexOf(searchvalue, start): str.indexOf("abc") trả về vị trí đầu tiên mà chuỗi "abc" xuất hiện trong chuỗi str. Nếu không có, trả về -1.
+        string.lastIndexOf(searchvalue, start): str.lastIndexOf("abc"): trả về vị trí cuối cùng mà chuỗi "abc" xuất hiện trong chuỗi str. Nếu không có, trả về -1.
+        string.includes(searchvalue, start): str.includes("abc", 3) - tìm chuỗi "abc" từ ký vị trí thứ 3 trong chuỗi str. Nếu có trả về giá trị true, nếu không trả về giá trị false.
+        string.search(searchvalue): str.search("abc") - trả về vị trí lần đầu tiên chuỗi "abc" xuất hiện trong chuỗi str. Trả về -1 nếu không có.
+        
+        string.slice(start, end):   str.slice(1, 3) - trả về một chuỗi là kết quả được cắt ra của str từ vị trí số 1 tới vị trí số 3 (không bao gồm ký tự ở vị trí số 3).
+                                    str.slice(2): trả về một chuỗi là kết quả được cắt ra của str từ vị trí số 2 tới hết chuỗi.
+        string.substring(start, end): str.substring(1,3) - tương tự str.slice(1,3)
+        string.substr(start, length): str.substr(1, 3) - trả về 1 chuỗi được cắt từ str, tính từ vị trí thứ 1 và lấy 3 ký tự.
+        string.trim(): cắt hết các ký tự cách trống ở đầu VÀ cuối của string.
+        
+
+
+
+    Bai 1:
+    1. Khởi tạo một mảng gồm N số tự nhiên ngẫu nhiên bất kỳ (0 - 100)
+    2. Sắp xếp lại mảng đã tạo ở (1) theo tứ tự tăng dần.
+
+    Bai 2:

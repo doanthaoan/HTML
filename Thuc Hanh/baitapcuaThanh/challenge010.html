@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .frame {
+            background: #ac474b;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hat {
+            width: 40px;
+            height: 10px;
+            background: #fff;
+            border-top: 15px solid #0e1f2b;
+            border-bottom: 15px solid #0e1f2b;
+        }
+        .hat2 {
+            width: 60px;
+            height:5px;
+            background: #0e1f2b;
+            z-index: 1;
+        }
+        .item-head {
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 50%;
+            position: relative;
+            transform: translateY(-5px);
+        }
+        .eyes {
+            width: 10px;
+            height: 10px;
+            background: #0e1f2b;
+            position: absolute;
+            border-radius: 50%;
+            top: 18px;
+        }
+        .e1 {left: 15px;}
+        .e2 {right: 15px;}
+        .scarf-outer {
+            width: 80px;
+            background: #ac474b;
+            transform: translateY(-20px);
+            text-align: center;
+            z-index: 2;
+        }
+        .scarf {
+            width: 60px;
+            height:10px;
+            border: 3px solid #ac474b;
+            border-radius: 10px;
+            background: #ffa63f;
+            transform: translateX(7px);            
+        }
+        .item-body {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            transform: translateY(-30px);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="frame" style="margin: 0; padding: 0; width: 400px; height: 300px; margin: 0 auto; position: relative;">
+       <div class="box">
+           
+       </div>
+        <div class="hat"></div>
+        <div class="hat2"></div>
+        <div class="item-head">
+            <div class="eyes e1"></div>
+            <div class="eyes e2"></div>
+        </div>
+        <div class="scarf-outer">
+            <div class="scarf"></div>
+        </div>
+        <div class="item-body"></div>
+    </div>
+</body>
+</html>

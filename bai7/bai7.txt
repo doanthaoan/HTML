@@ -1,0 +1,25 @@
+B7 - Blog pages:
+1. Làm trang blogone.html:
+- Dựa theo giao diện như hình ảnh file Template-singlecolor-blogtwo-html.png
+- Hiệu ứng theo video: Template-singlecolor-blogtwo-html.webm
+2. Làm trang blogtwo.html:
+- Dựa theo giao diện như hình ảnh file Template-singlecolor-blogtwo-html.png
+- Hiệu ứng theo video: Template-singlecolor-blogtwo-html.webm
+Tài nguyên: 
+	+ Các hình ảnh và video được đặt ở cùng folder B7 - Blog pages
+Yêu cầu:
+	+ Phân tích kỹ cấu trúc và các hiệu ứng trước khi bắt đầu
+	+ Sử dụng bootstrap tương tự trang homepage (Bài 4)
+	+ Tận dụng file css trang homepage (Bài 4) cho các thành phần dùng chung
+	+ Menu đảm bảo click vào Home thì về trang homepage, click blog về trang blogone.html
+	+ Đang ở trang Home thì Menu Home có hiệu ứng active
+	+ Đang ở trang blogone thì Menu Blog có hiệu ứng active
+	+ Sử dụng font-awesome cho các icon
+	+ Các hiệu ứng có thể tùy ý sử dụng CSS hoặc JS đều được
+	+ Các mũi tên (tam giác) có thể dùng hình ảnh hoặc CSS tùy ý
+3. Yêu cầu thêm về Elementor (Wordpress):
+	+ Sử dụng Elementor tạo các trang như trên trên domain ahl-jsc.com
+	+ Học cách sử dụng các hiệu ứng và so sánh với phương pháp bản thân tự làm
+
+
+

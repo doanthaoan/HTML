@@ -1,0 +1,14 @@
+Thực hiện trang homepage hoàn chỉnh
+1. Các yêu cầu bắt buộc:
+	+ Sử dụng bootstrap grid để tạo cấu trúc (để đảm bảo tính responsive)
+	+ Tạo các section tương ứng cho các mục:
+		- 3 cột trên (dưới banner)
+		- take the tour
+		- section 2 cột trái/phải với ảnh và text
+		- section happy clients
+2. Các yêu cầu thêm về HTML:
+	+ Kết hợp với bài header & banner trước dó
+	+ Tạo footer như thiết kế
+3. Yêu cầu thêm về Elementor (Wordpress): 
+	+ Sử dụng Elementor tạo trang như thiết kế trên domain ahl-jsc.com bằng tài khoản mỗi người
+	+ Sử dụng 1 số hiệu ứng animation đối với các widget (tùy thấy phù hợp)

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            margin: 10px;
+        }
+
+        #ketqua {
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .wrap {
+            display: flex;
+            width: 80px;
+            height: 30px;
+            position: relative;
+            border-radius: 20px;
+        }
+
+        .square {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(5px, -50%);
+            /* bottom: 0; */
+            left: 0;
+            transition: transform 200ms;
+        }
+
+        .on {
+            /* left: calc(50%); */
+            transform: translate(50px, -50%);
+            background-color: orange !important;
+
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <input type="text" id="phantu_1">
+    <input type="text" id="phantu_2">
+    <button id="tinhtong" class="abc def ghk">Tinh tong</button>
+
+    <div id="ketqua">0</div>
+    <div class="wrap red swap">
+        <div class="square blue swap" id="square"></div>
+    </div>
+    <button id="swap" class="abc def ghk">Đổi màu</button>
+    <script>
+        function cong(a, b) {
+            let c;
+            c = a + b;
+            return c;
+        }
+
+        // document.getElementById("tinhtong").onclick = function() {
+        //     let a = document.getElementById("phantu_1").value;
+        //     let b = document.getElementById("phantu_2").value;
+        //     console.log(a, b);
+        //     if (a == 3 && b == 5) {
+        //         document.getElementById("ketqua").innerHTML = cong(parseInt(a), parseInt(b));
+        //     } else {
+        //         document.getElementById("ketqua").innerHTML = "Moi nhap lai so a hoac b";
+        //     }
+
+
+        //     // console.log(cong(parseInt(a), parseInt(b)))
+        // };
+        // document.getElementsByTagName("li").onclick = function(e) {
+        //     console.log("aaaaaaa ",e.target);
+        // }
+
+        // let dienthoaiA = {
+        //     mausac: "den",
+        //     kichthuoc: "14x15",
+        //     hedh: "iOS",
+        //     tinhtoan: cong(1,2)
+        // }
+        // console.log(dienthoaiA.tinhtoan);
+        // Pure JS
+        document.getElementById("swap").onclick = function () {
+            // let classLeft = document.getElementById("left").classList;
+            // let classRight = document.getElementById("right").classList;
+            // console.log("aaaaaa",classLeft.contains("left"));
+            let square = document.getElementById("square");
+            square.classList.toggle("on")
+            // console.log(window.getComputedStyle.square);
+        }
+
+        // jQuery
+        $('.swap').click(function (e) {    
+            e.stopPropagation();
+            // e.stopImmediatePropagation();
+            $('#square').toggleClass("on");
+        })
+    </script>
+</body>
+
+</html>
