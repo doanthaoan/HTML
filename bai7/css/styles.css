@@ -172,10 +172,53 @@
 #blog-one {
   margin: 40px auto;
 }
+.month-content {
+  position: relative;
+}
+.month-content .vertical-line {
+  position: absolute;
+  width:1px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #dab074;
+  padding:0;
+  z-index: -1;
+}
+#blog-content .month {
+  padding-bottom:50px;
+  text-align: center;
+}
+
+#blog-content .month span {
+  padding: 10px;
+  border: solid 1px #dab074;
+  background-color: #fff;
+}
 .blog-item {
   overflow: hidden;
   font-size: 14px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.blog-item.right {
+  flex-flow: row-reverse;
+  padding-top: 80px;
+  /* border-left:1px solid #dab074; */
+}
+.blog-item .item-content {
+  max-width: 480px;
+}
+.blog-item .item-arrow {
+  width: 80px;
+  height: auto;
+}
+.blog-item.left .item-arrow {
+  background: transparent url("../images/left.png") 40px top no-repeat;
+}
+.blog-item.right .item-arrow {
+  background: transparent url("../images/right.png") -1px top no-repeat;
 }
 .blog-item h2.title {
   font-size: 20px;

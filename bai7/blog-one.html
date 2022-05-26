@@ -10,8 +10,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <script src="https://kit.fontawesome.com/5294af0157.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -204,7 +203,7 @@
                 date: "JAN 22"
             },
             {
-                image: "images/3.jpg",
+                image: "images/project1.jpg",
                 title: "Tiêu đề bài viết 03",
                 author: "Thanh",
                 short_content: "Lorem 3",
@@ -215,66 +214,108 @@
                 url: "blog-detail.html",
                 date: "APR 15"
             },
+            {
+                image: "images/4.jpg",
+                title: "Tiêu đề bài viết 03",
+                author: "Thanh",
+                short_content: "Lorem 3",
+                content: "full content 2",
+                tags: ["Create", "News", "Blog"], // Creative, News, Blog
+                likes: 120,
+                comments: 30,
+                url: "blog-detail.html",
+                date: "APR 15"
+            },
+            {
+                image: "images/6.jpg",
+                title: "Tiêu đề bài viết 03",
+                author: "Thanh",
+                short_content: "Lorem 3",
+                content: "full content 2",
+                tags: ["Create", "News", "Blog"], // => "Creative, News, Blog"
+                likes: 120,
+                comments: 30,
+                url: "blog-detail.html",
+                date: "APR 15"
+            },
         ];
+
         let data12 = [];
+
         let blogItem = '';
-        for (let i = 0; i < data.length; i++) {
-            // console.log(data[i]);
-            // blogItem += '<div class="blog-item col-sm-12 col-md-6">';
-            // blogItem += `<div class="image">
-            //                     <img src="${data[i].image}" alt="">
-            //                     <div class="date">
-            //                         <span>
-            //                             <h2>14</h2>
-            //                             <h6>FEB</h6>
-            //                         </span>
-            //                     </div>
-            //                 </div>`;
-            // blogItem += `<h2 class="title">${data[i].title}</h2>`;
-            // blogItem += `<p class="author">Posted by <a href="">${data[i].author}</a></p>`;
-            // blogItem += `   <p class="content">
-            //                     ${data[i].content}
-            //                 </p>`;
-            // blogItem += `<a href="${data[i].author}" class="readmore">View More</a>`;
-            // blogItem += `<div class="meta">
-            //                     <span class="tags"><i class="fa fa-tags"></i> Creative</span>
-            //                     <span class="like"><i class="fa fa-heart"></i> ${data[i].likes} Love</span>
-            //                     <span class="comment"><i class="fa fa-comments"></i> ${data[i].comments} Comments</span>
-            //                 </div>`
-            // blogItem += '</div>';
-            let postdate = data[i].date;
-            // let date = data[i].date.slice(4,6);
-            // let month = data[i].date.slice(0,3);
-            // console.log(postdate.split(" "));
-            let date = postdate.split(" ")[1];
-            let month = postdate.split(" ")[0];
-                // console.log("ngay", date, " -- thang: ", month);
-            let tags = data[i].tags.join(", ");
-            
+        for(let i = 0; i < data.length; i++) {
+            console.log(data[i].image);
+            let tags = data[i].tags;
+            let tagsString = tags.join(", ");
+            // for(let j = 0; j < tags.length; j++) {
+            //     if (j !== tags.length - 1)
+            //         tagsString += tags[j] + ", ";
+            //     else 
+            //         tagsString += tags[j];
+            // }
+            console.log(tagsString);
             blogItem += `<div class="blog-item col-sm-12 col-md-6">
                             <div class="image">
                                 <img src="${data[i].image}" alt="">
                                 <div class="date">
                                     <span>
-                                        <h2>${date}</h2>
-                                        <h6>${month}</h6>
+                                        <h2>14</h2>
+                                        <h6>FEB</h6>
                                     </span>
                                 </div>
                             </div>
-                            <h2 class="title">${data[i].title}</h2>
-                            <p class="author">Posted by <a href="">${data[i].author}</a></p>
+                            <h2 class="title">Tiêu đề bài post</h2>
+                            <p class="author">Posted by <a href="">ThanhVT</a></p>
                             <p class="content">
-                                ${data[i].content}
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere perspiciatis asperiores
+                                eius totam doloribus numquam itaque velit natus, esse nam, obcaecati voluptates quos
+                                illum qui sint reiciendis labore eaque officia!
                             </p>
-                            <a href="${data[i].url}" class="readmore">View More</a>
+                            <a href="#" class="readmore">View More</a>
                             <div class="meta">
-                                <span class="tags"><i class="fa fa-tags"></i> ${tags}</span>
-                                <span class="like"><i class="fa fa-heart"></i> ${data[i].likes} Love</span>
-                                <span class="comment"><i class="fa fa-comments"></i> ${data[i].comments} Comments</span>
+                                <span class="tags"><i class="fa fa-tags"></i> ${tagsString}</span>
+                                <span class="like"><i class="fa fa-heart"></i>${data[i].likes} Love</span>
+                                <span class="comment"><i class="fa fa-comments"></i>13 Comments</span>
                             </div>
-
                         </div>`;
         }
+        
+        $('#blog-content').html(blogItem);
+        // for (let i = 0; i < data.length; i++) {
+        //     // console.log(data[i]);
+        //     // blogItem += '<div class="blog-item col-sm-12 col-md-6">';
+        //     // blogItem += `<div class="image">
+        //     //                     <img src="${data[i].image}" alt="">
+        //     //                     <div class="date">
+        //     //                         <span>
+        //     //                             <h2>14</h2>
+        //     //                             <h6>FEB</h6>
+        //     //                         </span>
+        //     //                     </div>
+        //     //                 </div>`;
+        //     // blogItem += `<h2 class="title">${data[i].title}</h2>`;
+        //     // blogItem += `<p class="author">Posted by <a href="">${data[i].author}</a></p>`;
+        //     // blogItem += `   <p class="content">
+        //     //                     ${data[i].content}
+        //     //                 </p>`;
+        //     // blogItem += `<a href="${data[i].author}" class="readmore">View More</a>`;
+        //     // blogItem += `<div class="meta">
+        //     //                     <span class="tags"><i class="fa fa-tags"></i> Creative</span>
+        //     //                     <span class="like"><i class="fa fa-heart"></i> ${data[i].likes} Love</span>
+        //     //                     <span class="comment"><i class="fa fa-comments"></i> ${data[i].comments} Comments</span>
+        //     //                 </div>`
+        //     // blogItem += '</div>';
+        //     let postdate = data[i].date;
+        //     // let date = data[i].date.slice(4,6);
+        //     // let month = data[i].date.slice(0,3);
+        //     // console.log(postdate.split(" "));
+        //     let date = postdate.split(" ")[1];
+        //     let month = postdate.split(" ")[0];
+        //         // console.log("ngay", date, " -- thang: ", month);
+        //     let tags = data[i].tags.join(", ");
+            
+            
+        // }
         /* Show/Hide Date functions 
             - Based on current structure.
             - Input: current hover element
@@ -293,29 +334,39 @@
         document.getElementById("blog-content").innerHTML = blogItem;
         
         // // get all elements with class .blog-item
-        // let itemBlocks = document.getElementsByClassName('blog-item');
+        let itemBlocks = document.getElementsByClassName('blog-item');
         
         // // Add event mouseover/mouseout for EACH (ALL) elements with class .blog-item
-        // for(let i = 0; i < itemBlocks.length; i++) {
-        //     itemBlocks[i].addEventListener('mouseover', (e) => {
-        //         e.stopPropagation(); // stop the event loop when it occured 1 time
-        //         showDate(itemBlocks[i]);
-        //     });
-        //     itemBlocks[i].addEventListener('mouseout', (e) => {
-        //         e.stopPropagation(); // stop the event loop when it occured 1 time
-        //         hideDate(itemBlocks[i]);
-        //     })
-        // }
-
-        $('.blog-item').hover(
-            function () {  // mouse in
-                // console.log("aaaa")
-                $(this).find('.date').css("left", "0");
-            },
-            function() { // mouse out
-                $(this).find('.date').css("left", "-100%");
-            }
-        )
+        for(let i = 0; i < itemBlocks.length; i++) {
+            itemBlocks[i].addEventListener('mouseover', (e) => {
+                e.stopPropagation(); // stop the event loop when it occured 1 time
+                showDate(itemBlocks[i]);
+            });
+            itemBlocks[i].addEventListener('mouseout', (e) => {
+                e.stopPropagation(); // stop the event loop when it occured 1 time
+                hideDate(itemBlocks[i]);
+            })
+        }
+        // console.log(blogItem);
+        // $('#blog-content').html(blogItem);
+        // $('.blog-item').hover(
+        //     function () {  // mouse in
+        //         // console.log("aaaa")
+        //         $(this).find('.date').css({
+        //             "background-color": "red",
+        //             "color": "black",
+        //             'font-size': "10px!important"
+        //         });
+        //     },
+        //     function() { // mouse out
+        //         $(this).find('.date').css("left", "-100%");
+        //     }
+        // )
+        let obj = {
+            'name': 'value',
+            'name2': 2
+        }
+        // $('.meta span').last().addClass("testClass");
     </script>
 </body>
 
