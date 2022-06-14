@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [
+            ['1', '2', '3', '4'],
+            ['5', '6', '7'],
+            ['8', '9']
+        ]
+
+        let obj = [
+            {id: '1', name: '2', email: '3',description: [4, 4,5,76,12]},
+            {a1: '5', a2: '6', a3: '7', a4: ''},
+            {c1: '8',c2: '9'}
+        ]
+            
+        // Ket qua can phai: "1,2,3,4,5,6,7,8,9"
+        let result = "";
+        let result2 = "";
+        let result3 = "";
+        // Cach 1
+        for (let i = 0; i < a.length; i++) {
+            
+            for (let j = 0; j < a[i].length; j++) {
+                // console.log("i = ", i, " j = ", j);
+                result += a[i][j] + ",";
+            }
+        }
+
+        // Cach 2
+        for (let i = 0; i < a.length; i++) {
+            for(let j = 0; j < a[i].length; j++) {
+                // console.log("j = ", j, " a[i].length - 1 = ", a[i].length - 1);
+                if (i == (a.length - 1) && j == (a[i].length - 1)) {
+                    result2 += a[i][j];
+                } else {
+                    result2 += a[i][j] + ","
+                }
+            }
+        }
+        console.log(obj.length);
+        for (let i = 0; i < obj.length; i++) {
+            if (i === 0) {
+                result3 = obj[i].a1 + obj[i].a2  + obj[i].a3  + obj[i].a4;
+            } else if( i === 1) {
+                result3 += obj[i].b1 + obj[i].b2  + obj[i].b3;
+            } else {
+                result3 += obj[i].c1 + obj[i].c2;
+            }
+            console.log(obj[i]);
+            
+        }
+        console.log("ket qua TRUOC khi cat chuoi: ", result);
+        result = result.substr(0, result.length - 1);
+        console.log("ket qua SAU khi cat chuoi: ", result);
+        console.log("Ket qua CACH 2:", result2);
+        console.log("Ket qua OBJ:", result3)        
+
+        let arr = [];
+        for (let i = 0; i < 10; i++) {
+            arr.push(Math.floor(Math.random() * 100));
+        }
+        console.log("Arr before sorted: ", arr);
+        function sortArr(arr) {
+            let temp;
+            for(let i = 0; i < arr.length; i++) {
+                for(let j = 0; j < arr.length - i - 1; j++) {
+                    if (arr[j] > arr[j+1]) {
+                        temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                    }
+                    console.log(`Step ${i} - ${j}`, arr);
+                }
+            }
+        }
+       
+        // sortArr(arr);
+        console.log("Arr after sorted: ", arr);
+
+
+    </script>
+</body>
+</html>

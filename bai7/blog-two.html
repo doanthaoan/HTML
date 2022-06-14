@@ -345,45 +345,105 @@
         ];
 
         let data12 = [];
-
-        let blogItem = '';
-        for (let i = 0; i < data.length; i++) {
-            console.log(data[i].image);
-            let tags = data[i].tags;
-            let tagsString = tags.join(", ");
-            // for(let j = 0; j < tags.length; j++) {
-            //     if (j !== tags.length - 1)
-            //         tagsString += tags[j] + ", ";
-            //     else 
-            //         tagsString += tags[j];
-            // }
-            console.log(tagsString);
-            blogItem += `<div class="blog-item col-sm-12 col-md-6">
-                            <div class="image">
-                                <img src="${data[i].image}" alt="">
-                                <div class="date">
-                                    <span>
-                                        <h2>14</h2>
-                                        <h6>FEB</h6>
-                                    </span>
-                                </div>
+            let monthBlock = "";
+            let blogContent = "";
+        for(let i = 0; i < postsData.length; i++) { // for cho thang
+            // console.log(postsData[i]);
+            monthBlock = "";
+            monthBlock += `<div class="row month-content" id="month-${i}">
+                            <div class="vertical-line"></div>
+                                <div class="month col-12">
+                                    <span>${postsData[i].month}</span>
+                                </div>`
+            
+            // Lam khoi cac bai viet
+            // Dung vong for o day voi tung bai viet
+            let postsInMonth = "";
+            for(let j = 0; j < postsData[i].data.length; j++) {
+                let postItem = postsData[i].data[j];
+                console.log(postItem.title);
+                let direction = 'left';
+                if (j % 2 !== 0) {
+                    direction = 'right'
+                }
+                postsInMonth += `<div class="blog-item ${direction} col-6 g-0">
+                    <div class="item-content">
+                        <div class="image">
+                            <img src="i${postItem.image}" alt="">
+                            <div class="date">
+                                <span>
+                                    <h2>14</h2>
+                                    <h6>FEB</h6>
+                                </span>
                             </div>
-                            <h2 class="title">Tiêu đề bài post</h2>
-                            <p class="author">Posted by <a href="">ThanhVT</a></p>
-                            <p class="content">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere perspiciatis asperiores
-                                eius totam doloribus numquam itaque velit natus, esse nam, obcaecati voluptates quos
-                                illum qui sint reiciendis labore eaque officia!
-                            </p>
-                            <a href="#" class="readmore">View More</a>
-                            <div class="meta">
-                                <span class="tags"><i class="fa fa-tags"></i> ${tagsString}</span>
-                                <span class="like"><i class="fa fa-heart"></i>${data[i].likes} Love</span>
-                                <span class="comment"><i class="fa fa-comments"></i>13 Comments</span>
-                            </div>
-                        </div>`;
+                        </div>
+                        <h2 class="title">${postItem.title}</h2>
+                        <p class="author">Posted by <a href="">ThanhVT</a></p>
+                        <p class="content">
+                            ${postItem.content}
+                        </p>
+                        <a href="#" class="readmore">View More</a>
+                        <div class="meta">
+                            <span class="tags"><i class="fa fa-tags"></i> Creative</span>
+                            <span class="like"><i class="fa fa-heart"></i> Love</span>
+                            <span class="comment"><i class="fa fa-comments"></i> Comments</span>
+                        </div>
+                    </div>
+                    <div class="item-arrow">
+                        
+                    </div>
+                </div>`;
+            }
+            monthBlock += postsInMonth;
+            monthBlock += `</div>`;
+            
+            blogContent += monthBlock;
         }
-
+        document.getElementById('blog-content').innerHTML = blogContent;
+        
+        // for(let i = 0; i < postsData.length; i++) {
+        //     console.log(postsData[i].data);
+        //     let postsInMonth = "";
+        //     for(let j = 0; j < postsData[i].data.length; j++) {
+        //         let postItem = postsData[i].data[j];
+        //         console.log(postItem.title);
+        //         let direction = 'left';
+        //         if (j % 2 !== 0) {
+        //             direction = 'right'
+        //         }
+        //         postsInMonth += `<div class="blog-item ${direction} col-6 g-0">
+        //             <div class="item-content">
+        //                 <div class="image">
+        //                     <img src="i${postItem.image}" alt="">
+        //                     <div class="date">
+        //                         <span>
+        //                             <h2>14</h2>
+        //                             <h6>FEB</h6>
+        //                         </span>
+        //                     </div>
+        //                 </div>
+        //                 <h2 class="title">${postItem.title}</h2>
+        //                 <p class="author">Posted by <a href="">ThanhVT</a></p>
+        //                 <p class="content">
+        //                     ${postItem.content}
+        //                 </p>
+        //                 <a href="#" class="readmore">View More</a>
+        //                 <div class="meta">
+        //                     <span class="tags"><i class="fa fa-tags"></i> Creative</span>
+        //                     <span class="like"><i class="fa fa-heart"></i> Love</span>
+        //                     <span class="comment"><i class="fa fa-comments"></i> Comments</span>
+        //                 </div>
+        //             </div>
+        //             <div class="item-arrow">
+                        
+        //             </div>
+        //         </div>`;
+        //     }
+        //     let monthContent = document.getElementById(`month-${i}`).innerHTML
+        //     // console.log(oldInnerHTML);
+        //     monthContent += postsInMonth;
+        //     document.getElementById(`month-${i}`).innerHTML = monthContent;
+        // }
         // $('#blog-content').html(blogItem);
         // for (let i = 0; i < data.length; i++) {
         //     // console.log(data[i]);
@@ -435,41 +495,7 @@
         }
 
         // Init blog-content for blog. Need for next script to show/hide date info
-        document.getElementById("blog-content").innerHTML = blogItem;
-
-        // // get all elements with class .blog-item
-        let itemBlocks = document.getElementsByClassName('blog-item');
-
-        // // Add event mouseover/mouseout for EACH (ALL) elements with class .blog-item
-        for (let i = 0; i < itemBlocks.length; i++) {
-            itemBlocks[i].addEventListener('mouseover', (e) => {
-                e.stopPropagation(); // stop the event loop when it occured 1 time
-                showDate(itemBlocks[i]);
-            });
-            itemBlocks[i].addEventListener('mouseout', (e) => {
-                e.stopPropagation(); // stop the event loop when it occured 1 time
-                hideDate(itemBlocks[i]);
-            })
-        }
-        // console.log(blogItem);
-        // $('#blog-content').html(blogItem);
-        // $('.blog-item').hover(
-        //     function () {  // mouse in
-        //         // console.log("aaaa")
-        //         $(this).find('.date').css({
-        //             "background-color": "red",
-        //             "color": "black",
-        //             'font-size': "10px!important"
-        //         });
-        //     },
-        //     function() { // mouse out
-        //         $(this).find('.date').css("left", "-100%");
-        //     }
-        // )
-        let obj = {
-            'name': 'value',
-            'name2': 2
-        }
+       
         // $('.meta span').last().addClass("testClass");
     </script>
 </body>
