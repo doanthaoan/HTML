@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Challenge 011</title>
+  <style>
+        /* Go CSS vao day */
+    .frame {
+      background-color: #ac474b;
+    }
+    .gift {
+      padding-top: 40px;
+    }
+    .top {
+      position: relative;
+      margin: 0 auto;
+      width: 80px;
+      margin-bottom: 60px;
+    }
+    .top div {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      border: 10px solid #fff;
+      
+    }
+    .top .left {
+      left: 5px;
+      border-radius: 50% 50% 0 50%;
+    }
+    .top .right {
+      right: 5px;
+      border-radius: 50% 50% 50% 0;
+    }
+    .bottom {
+      width: 150px;
+      height: 150px;
+      background-color: #fff;
+      margin: 0 auto;
+      position: relative;
+    }
+    .horizon {
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      background-color: #ac474b;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .vertical {
+      position: absolute;
+      height: 100%;
+      width: 20px;
+      background-color: #ac474b;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="frame" style="margin: 0; padding: 0; width: 400px; height: 300px; margin: 0 auto; position: relative;">
+    <div class="gift">
+      <div class="top">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="bottom">
+        <div class="horizon"></div>
+        <div class="vertical"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
