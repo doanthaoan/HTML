@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 500px;
+            margin: 50px auto;
+        }
+
+        #size {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        #size div {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <label for="number">Select Color</label>
+        <select name="color" id="color" onchange="showSize()">
+            <option value="">Chose your color</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+        </select>
+        <div class="size" id="size">
+            Please chose color to show sizes
+        </div>
+    </div>
+    <script>
+        let redData = ["XXL", "L", "M"];
+        let blueData = ["XL", "L"];
+        function showSize() {
+            let colorSelect = document.getElementById("color");
+            let sizeBox = document.getElementById("size");
+            let color = colorSelect.value;
+            let data = [];
+            if (color === 'red') {
+                data = redData;
+            } else if (color === 'blue') {
+                data = blueData;
+            }
+            let sizeHtml = "";
+            if (data.length > 0) {
+                for (let i = 0; i < data.length; i++) {
+                    sizeHtml += `<div>
+                                <input type="radio" name="size" id="size-${data[i]}" value="${data[i]}">
+                                <label for="">${data[i]}</label>
+                            </div>`;
+                }
+            } else {
+                sizeHtml = "Please chose color to show sizes";
+            }
+
+            sizeBox.innerHTML = sizeHtml;
+        }
+
+    </script>
+</body>
+
+</html>

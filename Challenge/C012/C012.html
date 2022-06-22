@@ -7,13 +7,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Challenge 012</title>
   <style>
-        /* Go CSS vao day */
+    .frame {
+      background-color: #d25b70; 
+    }
+    .wrap {
+      padding-top: 50px;
+    }
+    .sun {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #f6df96;
+      margin: 0 auto;
+      z-index: 2;
+    }
+    .sea {
+      position: absolute;
+      bottom: 0;
+      background-color: #6cb3a9;
+      width: 100%;
+      height: 50%;
+      z-index: 1;
+    }
+    .wave {
+      position: absolute;
+      height: 15px;
+      width: 100%;
+      background-color: #6cb3a9;
+      z-index: 3;
+    }
+    .w1 {
+      bottom: 60px;
+    }
+    .w2 {
+      bottom: 85px;
+    }
+    .w3 {
+      bottom: 110px;
+    }
+    .w4 {
+      bottom: 135px;
+    }
   </style>
 </head>
 
 <body>
   <div class="frame" style="margin: 0; padding: 0; width: 400px; height: 300px; margin: 0 auto; position: relative;">
-  <!-- Go HTML vao day -->
+    <div class="wrap">
+      <div class="sun"></div>
+      
+      <div class="sea">
+        
+      </div>
+      <div class="wave w1"></div>
+      <div class="wave w2"></div>
+      <div class="wave w3"></div>
+      <div class="wave w4"></div>
+    </div>
   </div>
 </body>
 
