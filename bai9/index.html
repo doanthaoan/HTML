@@ -25,7 +25,7 @@
 
 <body>
     <div class="wrap">
-        <label for="number">Select Color</label>
+        <label for="color">Select Color</label>
         <select name="color" id="color" onchange="showSize()">
             <option value="">Chose your color</option>
             <option value="red">Red</option>
@@ -36,14 +36,23 @@
         </div>
     </div>
     <script>
+        // Khai báo dữ liệu size cho mỗi loại màu sắc
         let redData = ["XXL", "L", "M"];
         let blueData = ["XL", "L"];
+
+        /* Hàm showSize: 
+            - Kiểm tra giá trị color là gì, 
+            - Với mỗi loại color sẽ gán dữ liệu size tương ứng
+            - Do dữ liệu size là 1 mảng, sử dụng vòng for để tạo html cho từng size trong mảng
+            - Chèn html đã tạo vào khung size
+         =======================*/
         function showSize() {
             let colorSelect = document.getElementById("color");
             let sizeBox = document.getElementById("size");
             let color = colorSelect.value;
+            
             let data = [];
-            if (color === 'red') {
+            if (color == "red") {
                 data = redData;
             } else if (color === 'blue') {
                 data = blueData;

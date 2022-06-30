@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="wrap">
+        <label for="color">chọn màu</label>
+        <select name="color" id="color" onchange="hienthimau()">
+            <option value="">chọn 1 màu</option>
+            <option value="do">Đỏ</option>
+            <option value="xanh">Xanh</option>
+        </select>
+        <div id="sizebox">
+            Chọn màu để hiển thị size
+            
+        </div>
+    </div>
+    <script>
+        let dataObj = [
+            {
+                color: "xanh",
+                size: ["XXL", "XL", "M"]
+            },
+            {
+                color: "do",
+                size: ["XL", "M", "S", "XS"]
+            }
+        ]
+        let xanhSize = ["XXL", "XL", "M"];
+        let doSize = ["XL", "M", "S", "XS"];
+        
+        function hienthimau() {
+            let colorBox = document.getElementById("color");
+            let sizeBox = document.getElementById("sizebox");
+
+            let mau = colorBox.value;
+            // console.log("da chon mau: ", mau);
+            
+            let selectedSize = dataObj.filter(e => (e.color === mau));
+
+            dataSize = selectedSize[0].size;
+            console.log(dataSize);
+            console.log(selectedSize);
+            let data = [];
+            if (mau === 'xanh') {
+                data = xanhSize;
+            } else if (mau === 'do') {
+                data = doSize;
+            }
+            let htmlSize = ""
+            if (data.length === 0) {
+                htmlSize = "Chọn màu để hiển thị size"
+            } else {
+                for (let i = 0; i < data.length; i++) {
+                htmlSize += `<div>
+                                <input type="radio" name="size">
+                                <label for="size">${data[i]}</label>
+                            </div>`;
+            }
+            }
+            
+            // console.log("HTML Size = ",htmlSize);
+            sizeBox.innerHTML = htmlSize;
+        }
+    </script>
+</body>
+</html>

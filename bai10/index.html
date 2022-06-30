@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 500px;
+            margin: 50px auto;
+        }
+
+        #size {
+            display: flex;
+            margin-top: 30px;
+        }
+
+        #size div {
+            padding: 5px 10px;
+        }
+        table, th, td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+        }
+        .inputForm {
+            margin-bottom: 20px;
+        }
+        .inputForm div {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <label for="color">Enter your text:</label>
+        <input type="text" id="inputText">
+        <button id="btnConvert">Convert</button>
+        <div class="size" id="text">
+            Please chose color to show sizes
+        </div>
+
+        <div class="inputForm">
+            <div class="name">
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="inputName">
+            </div>
+            <div class="username">
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="inputUsername">
+            </div>
+            <div class="password">
+                <label for="password">Password: </label>
+                <input type="text" name="password" id="inputPassword">
+            </div>
+            <button id="btn-save">Save</button>
+        </div>
+        <div id="userdata">
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </thead>
+                
+                <tbody>
+                    <tr><td colspan="6">
+                        No data
+                    </td></tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        async function getUsers() {
+            
+        }
+        // const userData = async () => {
+        //     let response = await fetch('http://localhost:5000/users/', {mode: 'no-cors'});
+        //     let data = await response.json()
+        //     console.log(data);
+        // };
+        // const requestOptions = {
+        //     mode: 'no-cors',
+        //     'content-type': 'application/json',
+        //     method: "GET",
+        //     credentials: 'omit'
+        // }
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('http://localhost:9000/users')
+            .then(response => response.json())
+            .then((data) => {
+            
+                const userData = data.data;
+                console.log(userData)
+                htmlContent = "";
+                if (userData && userData.length > 0) {
+                    for (let i = 0; i < userData.length; i++) {
+                        htmlContent += `<tr>
+                                            <td>${userData[i].id}</td>
+                                            <td>${userData[i].name}</td>
+                                            <td>${userData[i].username}</td>
+                                            <td>${userData[i].password}</td>
+                                            <td>${userData[i].date}</td>
+                                            <td><button data-id=${userData[i].id}>Delete</button</td>
+                                        </tr>`
+                    }
+                    // console.log(htmlContent);
+                    
+                } else {
+                    htmlContent = `<tr><td colspan="6">No data</td></tr>`;
+                }
+                const tbody = document.querySelector("table tbody");
+                tbody.innerHTML = htmlContent;
+
+        })
+        })
+        
+        
+        //  console.log(data);
+        function getText() {
+            let inputTextBox = document.getElementById("inputText");
+            
+            return inputTextBox.value;
+        }
+        
+        function convert(str) {
+            let words = str.split(" ");
+            for (let i = 0; i < words.length; i++) {
+                words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+            }
+            words = words.join(" ");
+            return words;
+        }
+        let btnConvert = document.getElementById("btnConvert");
+        btnConvert.onclick = function() {
+            let text = getText();
+            console.log("Dau vao: ",text);
+            let convertedText = convert(text);
+            
+            console.log("Dau ra: ", convertedText);
+            document.getElementById("text").innerHTML = convertedText;
+        }
+        function TinhTong(a, b) {
+            let c = a + b;
+            return c;
+        }
+        console.log(TinhTong(55,4));
+        // console.log(convert("day la doan van Ban gi do"));
+
+        // const getInputData = () => {
+        //     const name = document.getElementById('inputName').value;
+        //     const username = document.getElementById('inputUsername').value;
+        //     const password = document.getElementById('inputPassword').value;
+        //     if (name && username && password) {
+        //         fetch('http://localhost:9000/users/insert', {
+        //             headers: {
+        //                 'Content-Type': 'application/json'
+        //             },
+        //             method: "POST",
+        //             body: JSON.stringify({
+        //                 name: name,
+        //                 username: username,
+        //                 password: password
+        //             })
+        //         })
+        //         .then(response => response.json())
+        //         .then(data => console.log(data));
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
