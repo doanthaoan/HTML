@@ -1,0 +1,18 @@
+#page-content {
+    margin: 80px auto;
+}
+.page-actions {
+    margin: 20px auto;
+}
+.inputForm {
+    margin-bottom: 20px;
+}
+.inputForm div {
+    margin: 5px 0;
+}
+
+.action .btn {
+    padding:3px;
+    margin-right:10px;
+    font-size: 12px;
+}
